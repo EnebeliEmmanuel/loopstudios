@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [](https://github.com/EnebeliEmmanuel/loopstudios.git)
+- Live Site URL: [http://loopstudios-sigma.vercel.app/](https://github.com/EnebeliEmmanuel/loopstudios.git)
 
 ## My process
 
