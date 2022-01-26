@@ -1,0 +1,574 @@
+/* ####################### ↓ MY SOLUTION CSS ↓ ########################## */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;400;500&display=swap');
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: 'Alata', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 2em;
+  width: 100%;
+  max-width: 1196px;
+}
+
+/* ################################################################### HEADER ############ */
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../images/mobile/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header nav > div.navbar {
+  padding: 3em 2em 2em 2em;
+
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1196px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+
+input[type='checkbox'].toggle-check,
+header nav > div.navbar > .toggle-menu > label > .icon-menu {
+  display: none;
+}
+
+/* ### ONLY MOBILE AFFECTED ###*/
+/* ### ONLY MOBILE AFFECTED ###*/
+@media only screen and (max-width: 860px) {
+  /* ########################## TOGGLE MENU ###*/
+
+  input[type='checkbox'].toggle-check:not(:checked)
+    ~ header
+    nav
+    > div.navbar
+    > .toggle-menu
+    > label
+    > .toggle-menu-open {
+    display: block;
+  }
+  input[type='checkbox'].toggle-check:checked
+    ~ header
+    nav
+    > div.navbar
+    > .toggle-menu
+    > label
+    > .toggle-menu-close {
+    display: block;
+  }
+  input[type='checkbox'].toggle-check:checked ~ header {
+    position: fixed;
+    z-index: 99;
+    background-image: none;
+    background-color: hsl(0, 0%, 0%);
+  }
+  input[type='checkbox'].toggle-check:checked ~ header > div {
+    display: none;
+  }
+
+  header > nav > .navbar > ul.menu {
+    display: none;
+    width: 100%;
+    min-height: 80vh;
+    list-style-type: none;
+  }
+  header > nav > .navbar > ul.menu > li {
+    width: 100%;
+    margin: 1rem auto;
+  }
+  header > nav > .navbar > ul.menu > li > a {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  input[type='checkbox'].toggle-check:checked
+    ~ header
+    > nav
+    > .navbar
+    > ul.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* ########################## TOGGLE MENU ###*/
+}
+/* ### ONLY MOBILE AFFECTED ###*/
+/* ### ONLY MOBILE AFFECTED ###*/
+
+header .heading-text {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+header .heading-text h1 {
+  border: 3px solid white;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2.6em;
+  padding: 0.7em;
+}
+/* ################################################################### HEADER ############ */
+
+/* ################################################################### ABOUT SECTION ############ */
+section.about {
+  margin: 0 auto;
+  padding: 3rem 0;
+  width: 100%;
+  min-height: 100vh;
+}
+section.about .about-box {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.about .about-box > .about-content {
+  margin-top: 2rem;
+}
+section.about .about-box > .about-content > h2 {
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+section.about .about-box > .about-content > p {
+  padding: 0 1em;
+  text-align: center;
+  line-height: 1.6em;
+  color: hsl(0, 0%, 55%);
+}
+/* ################################################################### ABOUT SECTION ############ */
+
+/* ################################################################### OUR CREAIONS SECTION ############ */
+section.our-creations {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+}
+section.our-creations .creations-box {
+  margin-bottom: 7rem;
+}
+section.our-creations .creations-box .heading-creations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.6rem;
+}
+section.our-creations .creations-box .heading-creations h2 {
+  flex-grow: 1;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+}
+section.our-creations .creations-box .heading-creations a {
+  display: none;
+}
+section.our-creations .creations-box .gallery-box {
+  display: grid;
+  row-gap: 1.4rem;
+  grid-template-columns: 1fr;
+}
+section.our-creations .creations-box .gallery-box > .gallery-item {
+  position: relative;
+}
+section.our-creations
+  .creations-box
+  .gallery-box
+  > .gallery-item
+  > picture
+  > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+section.our-creations
+  .creations-box
+  .gallery-box
+  > .gallery-item
+  > .overlay-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.49933476808692223) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  top: 0;
+  left: 0;
+}
+section.our-creations
+  .creations-box
+  .gallery-box
+  > .gallery-item
+  > .overlay-text
+  > h3 {
+  position: absolute;
+  width: 48%;
+  left: 6%;
+  bottom: 20%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  color: white;
+}
+section.our-creations .creations-box > .link-wrapper {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.our-creations .creations-box > .link-wrapper > a {
+  padding: 0.8em 2.4em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none;
+}
+/* ################################################################### OUR CREAIONS SECTION ############ */
+
+/* ################################################################### FOOTER SECTION ############ */
+footer {
+  background-color: black;
+  color: white;
+  padding: 4rem 0;
+}
+footer .box-footer,
+footer .box-footer > .link-footer,
+footer .box-footer > .contact-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .box-footer > .link-footer > .brand-logo-footer {
+  text-align: center;
+}
+footer .box-footer > .link-footer > .brand-logo-footer > img {
+  max-width: 9rem;
+}
+footer .box-footer > .link-footer > ul {
+  margin: 2.6rem auto;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+footer .box-footer > .link-footer > ul > li {
+  margin: 0.7rem auto;
+}
+footer .box-footer > .link-footer > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .box-footer > .contact-footer > ul.social-link {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .box-footer > .contact-footer > ul.social-link > li {
+  margin: 0 0.6rem;
+}
+footer .box-footer > .contact-footer > p {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: hsl(0, 0%, 55%);
+}
+/* ################################################################### FOOTER SECTION ############ */
+
+/* ATTRIBUTION */
+.attribution {
+  background-color: rgb(83, 83, 83);
+  width: 100%;
+  min-height: 80px;
+  padding: 2rem auto;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(177, 177, 177);
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
+
+/* ATTRIBUTION */
+
+/* ############################################ DESKTOP ################################################### */
+/* ############################################ DESKTOP ################################################### */
+/* ############################################ DESKTOP ################################################### */
+/* ############################################ DESKTOP ################################################### */
+/* ############################################ DESKTOP ################################################### */
+/* ############################################ DESKTOP ################################################### */
+/* ############################################ DESKTOP ################################################### */
+
+@media only screen and (min-width: 860px) {
+  /* ################################################################### HEADER ############ */
+  header {
+    min-height: 90vh;
+    background: url('../images/desktop/image-hero.jpg') rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+  header nav > div.navbar {
+    padding: 4em 2em;
+  }
+  header nav > div.navbar > .toggle-menu {
+    display: none;
+  }
+  header > nav > .navbar > ul.menu {
+    list-style-type: none;
+    display: flex;
+    width: unset;
+    min-height: unset;
+  }
+  header > nav > .navbar > ul.menu > li {
+    margin-left: 2.2rem;
+  }
+  header > nav > .navbar > ul.menu > li > a {
+    position: relative;
+    padding: 0.5em 0;
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  header > nav > .navbar > ul.menu > li > a::after {
+    background: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid white;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  header > nav > .navbar > ul.menu > li > a:hover:after {
+    width: 50%;
+  }
+
+  header > .heading-text {
+    margin-top: 2.4rem;
+    width: 100%;
+    max-width: 1196px;
+  }
+  header > .heading-text h1 {
+    padding: 0.5em 0.6em;
+    font-size: 4.7em;
+    width: 60%;
+  }
+  /* ################################################################### HEADER ############ */
+
+  /* ################################################################### ABOUT SECTION ############ */
+  section.about .about-box {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: 6.5fr 2fr 4fr;
+    grid-template-rows: 2fr 3fr 1fr;
+  }
+  section.about .about-box > .about-image-grid {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  section.about .about-box > .about-content {
+    margin: 0;
+    padding: 6em 0 0 6em;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    background-color: white;
+  }
+  section.about .about-box > .about-content > h2 {
+    font-size: 3.2em;
+    text-align: left;
+  }
+  section.about .about-box > .about-content > p {
+    padding: 0;
+    text-align: left;
+  }
+
+  /* ################################################################### ABOUT SECTION ############ */
+
+  /* ################################################################### OUR CREAIONS SECTION ############ */
+  section.our-creations {
+    padding-bottom: 4em;
+  }
+  section.our-creations .creations-box .heading-creations h2 {
+    font-size: 3em;
+    text-align: left;
+  }
+  section.our-creations .creations-box .heading-creations a {
+    display: block;
+    padding: 0.6em 2.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  section.our-creations .creations-box .heading-creations a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  section.our-creations .creations-box .gallery-box {
+    margin-top: 6rem;
+    gap: 1.4rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  section.our-creations
+    .creations-box
+    .gallery-box
+    > .gallery-item
+    > .overlay-text {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.49933476808692223) 0%,
+      rgba(0, 0, 0, 0) 80%
+    );
+    transition: all 0.2s ease-in-out;
+  }
+
+  section.our-creations
+    .creations-box
+    .gallery-box
+    > .gallery-item
+    > .overlay-text
+    > h3 {
+    font-size: 2em;
+    padding: 0 1.4em;
+    width: 100%;
+    left: 0%;
+    bottom: 6%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  section.our-creations
+    .creations-box
+    .gallery-box
+    > .gallery-item
+    > .overlay-text:hover {
+    background: hsla(0, 0%, 100%, 0.7);
+  }
+  section.our-creations
+    .creations-box
+    .gallery-box
+    > .gallery-item
+    > .overlay-text:hover
+    > h3 {
+    color: black;
+  }
+
+  section.our-creations .creations-box > .link-wrapper {
+    display: none;
+  }
+  /* ################################################################### OUR CREAIONS SECTION ############ */
+
+  /* ################################################################### FOOTER SECTION ############ */
+  footer {
+    padding: 3rem 0;
+  }
+  footer .box-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .box-footer > .link-footer > .brand-logo-footer {
+    text-align: left;
+  }
+  footer .box-footer > .link-footer > ul {
+    flex-direction: row;
+    margin: 0;
+    margin-top: 1rem;
+  }
+  footer .box-footer > .link-footer > ul > li {
+    margin-right: 2rem;
+  }
+
+  footer .box-footer > .contact-footer > ul.social-link {
+    justify-content: flex-end;
+  }
+  footer .box-footer > .contact-footer > ul.social-link > li {
+    margin: 0;
+    margin-left: 1rem;
+  }
+
+  /* LINK HOVER */
+  footer .box-footer > .link-footer > ul > li > a,
+  footer .box-footer > .contact-footer > ul.social-link > li > a {
+    position: relative;
+    cursor: pointer;
+    padding: 0.4em 0;
+  }
+  footer .box-footer > .link-footer > ul > li > a::after,
+  footer .box-footer > .contact-footer > ul.social-link > li > a::after {
+    content: '';
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid white;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  footer .box-footer > .link-footer > ul > li > a:hover:after,
+  footer .box-footer > .contact-footer > ul.social-link > li > a:hover:after {
+    width: 50%;
+  }
+  /* LINK HOVER */
+  footer .box-footer > .contact-footer > p {
+    text-align: right;
+  }
+  /* ################################################################### FOOTER SECTION ############ */
+}
