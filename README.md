@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://cholis04.github.io/Loopstudios-landing-page/](https://cholis04.github.io/Loopstudios-landing-page/)
+- Live Site URL: [](https://github.com/EnebeliEmmanuel/loopstudios.git)
 
 ## My process
 
@@ -114,7 +114,7 @@ Using only checkboxes to create a responsive menu has limitations in manipulatin
 
 ## Author
 
-- Website - [](https://github.com/EnebeliEmmanuel)
+- Website - [](https://github.com/EnebeliEmmanuel/loopstudios.git)
 - Frontend Mentor - [@EnebeliEmmanuel](https://www.frontendmentor.io/profile/EnebeliEmmanuel)
 
 - Codepen - [@enebeliemmanuel](https://codepen.io/enebeliemmanuel)
